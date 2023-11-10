@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.in{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.main-box {
+    width: 90vw; 
+    background: #1c1b1b;
+    min-height: 100vh;
+}
+.main-content {
+    margin-top: 30px;
+    min-height: 73vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ico{
+    margin-left: 15px;
+}
+.nav{
+    background-color: aliceblue;
+    width: 70%;
+    border-radius: 2px;
+    margin: 20px 15% 0 15%;
+}
+.tac{
+    text-align: center;
+}
+.w{
+   color: white; 
+}
+.sw1{
+transform: translateY(-50px);
+}
+.sw2{
+    transform: translateY(50px);
+}
+.cover-ig{
+    height: 270px;
+    margin: 5px;
+    object-fit: cover;
+}
+@media (max-width: 767px) {
+    .main-box {
+        width: 100%;
+        margin: 0; 
+    }
+    .nav{
+        width: 90%;
+        margin: 20px 5% 0 5%;
+    }
+    .main-content {
+        margin-top: 30px;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+    .sw1{
+        transform: none;
+    }
+    .sw2{
+        transform: none;
+    }
+    .main-box {
+        height: 100%;
+    } 
+    .cover-ig{
+        margin: 0;
+        height: 320px;
+    }
+}
+@media (max-width: 900px) {
+    .animcorn{
+        display: none;
+    }
+    .spinnerI{
+        display: none;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .main-box {
+        margin: 0 50px;
+    }
+}
+.spinnerI {
+    width: 3em;
+    height: 3em;
+    cursor: not-allowed;
+    border-radius: 50%;
+    border: 2px solid #444;
+    box-shadow: -10px -10px 10px #6359f8, 0px -10px 10px 0px #9c32e2, 10px -10px 10px #f36896, 10px 0 10px #ff0b0b, 10px 10px 10px 0px#ff5500, 0 10px 10px 0px #ff9500, -10px 10px 10px 0px #ffb700;
+    animation: rot55 0.7s linear infinite;
+  }
+  
+  .spinnerin {
+    border: 2px solid #444;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes rot55 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.animcorn{
+    animation: rotata 1s ease-in-out infinite;
+}
+   @keyframes rotata {
+    0%{
+         transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(-10deg);
+    }
+    45%{
+        transform: rotate(10deg);
+    }
+    60%{
+        transform: rotate(-10deg);
+    }    
+    70%{
+        transform: rotate(0);
+    }
+   }
