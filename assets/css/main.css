@@ -8,6 +8,9 @@ body {
     justify-content: center;
     height: 100%;
 }
+a,img{
+    margin: 0!important;
+}
 .in{
     display: flex;
     flex-direction: row;
@@ -41,11 +44,24 @@ body {
 .w{
    color: white; 
 }
+.sw{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 270px;
+    width: 190px;
+    margin: 14px!important;
+}
 .sw1{
 transform: translateY(-50px);
 }
 .sw2{
-    transform: translateY(50px);
+transform: translateY(50px);
+}
+.imgcv{
+    height:270px ;
+    margin: 0;
 }
 .cover-ig{
     height: 270px;
@@ -67,6 +83,8 @@ transform: translateY(-50px);
         height: auto;
         flex-direction: column;
     }
+
+
     .sw1{
         transform: none;
     }
@@ -79,6 +97,9 @@ transform: translateY(-50px);
     .cover-ig{
         margin: 0;
         height: 320px;
+    }
+    .cov{
+        position: absolute!important;
     }
 }
 @media (max-width: 900px) {
@@ -142,3 +163,24 @@ transform: translateY(-50px);
         transform: rotate(0);
     }
    }
+           @keyframes moveUpDown {
+            0% {
+                transform: translateY(0);
+            }
+            28% {
+                transform: translateY(0);
+            }
+
+            33% {
+                transform: translateY(-274px);
+            }
+            61% {
+                transform: translateY(-274px);
+            }
+            66% {
+                transform: translateY(0);
+            }
+        }
+        .cover-ig {
+            animation: moveUpDown 10s infinite; /* Adjust the duration as needed */
+        }
